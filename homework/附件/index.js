@@ -9,7 +9,9 @@ window.onload = function() {
     });
 
     // TODO: 在此为 top-right 元素设置监听器
-    // document.getElementById('top-right') ...
+    document.getElementById('top-right').addEventListener('click', function(){
+        clickLogin();
+    })
 
 }
 
@@ -39,13 +41,16 @@ function clickLogin() {
 function initUserInfo() {
     // TODO: 修改页面显示错误的 bug
     let username = Kernal.getUserName();
-    let content = `<div id="user">
+    let content = (`<div id="user">
                         <span id="user-img">
                             <img src="img/user.jpg" />
                         </span>
                         <span id="name"> ${username} </span>
-                    </div>`;
-    document.getElementById('top-right').innerHTML = content;
+                    </div>`);
+    console.log(content)
+    document.getElementById('top-right').textContent = content;
+    console.log(document.getElementById('top-right').innerHTML)
+    
 }
 
 // ============================================================ 你不需要去关注的代码

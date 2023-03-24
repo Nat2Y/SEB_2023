@@ -218,6 +218,7 @@ body{
     cursor: pointer;
 }
 
+/*
 #hot li:nth-child(odd){
     margin-right: 60px;
     float: left;
@@ -226,10 +227,10 @@ body{
 #hot li:nth-child(even){
     margin-left: 58px;
     float: right;
-}
+}*/
 
 #hot li .hot-order{
-    margin-right: 2px;
+    /*margin-right: 2px;*/
     font-family: Arial, sans-serif;
     width: 18px;
     letter-spacing: -1px;
