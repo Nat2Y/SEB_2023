@@ -17,7 +17,6 @@ window.onload = function() {
 
 function search() {
     // TODO: 搜索触发后的行为
-    //var input_text = document.getElementById('text_input').value;
     var input_text = document.getElementsByTagName('input')[0].value;
     if (input_text == ""){
         alert("请输入搜索内容");
@@ -41,15 +40,16 @@ function clickLogin() {
 function initUserInfo() {
     // TODO: 修改页面显示错误的 bug
     let username = Kernal.getUserName();
+    console.log(username);
+    //username = username.substring(0, 5);
     let content = (`<div id="user">
                         <span id="user-img">
                             <img src="img/user.jpg" />
                         </span>
                         <span id="name"> ${username} </span>
-                    </div>`);
-    console.log(content)
-    document.getElementById('top-right').textContent = content;
-    console.log(document.getElementById('top-right').innerHTML)
+                    </div>`).replace("<style>", "&lt;style&gt;");
+    document.getElementById('top-right').innerHTML = content;                
+    //document.getElementById('top-right').textContent = content;
     
 }
 
